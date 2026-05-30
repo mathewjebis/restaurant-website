@@ -3,41 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spicy Hut - Restaurant in Chennai</title>
-
+    <title>Spicy Hut - Restaurant</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
     <link rel="stylesheet" href="index.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
+    <!-- HERO SECTION -->
     <div class="landing">
       <header>
-        <a href="index.html" id="logo"
-          ><h2><i class="fa-solid fa-bowl-rice"></i>Spicy Hut</h2></a
-        >
+        <a href="index.html" id="logo">
+          <h2><i class="fa-solid fa-bowl-rice"></i> Spicy Hut</h2>
+        </a>
         <nav>
-          <a href="#menuheading"><i class="fa-solid fa-bars"></i>Menu</a>
+          <a href="#menuheading"><i class="fa-solid fa-utensils"></i> Menu</a>
           <a href="#locheading"
-            ><i class="fa-solid fa-location-pin"></i>Locations</a
+            ><i class="fa-solid fa-location-pin"></i> Locations</a
           >
+          <a href="#footer"><i class="fa-solid fa-phone"></i> Contact</a>
         </nav>
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </header>
 
       <div class="maintext">
+        <div class="badge">Est. 2010</div>
         <div class="tagline1">Finest Treat for Your Taste Buds</div>
         <div class="tagline2">Freshest Ingredients Guaranteed</div>
-        <div class="callus">Call us @+91 1234567890</div>
-        <button>Order Online</button>
+        <div class="callus">
+          <i class="fa-solid fa-phone"></i> +91 1234567890
+        </div>
+        <div class="hero-buttons">
+          <button class="btn-primary">Order Online</button>
+          <a href="#menuheading" class="btn-secondary">View Menu</a>
+        </div>
+      </div>
+
+      <div class="scroll-down">
+        <a href="#menuheading"><i class="fa-solid fa-chevron-down"></i></a>
       </div>
     </div>
 
-    <h2 id="menuheading">Menu</h2>
+    <!-- MENU SECTION -->
+    <h2 id="menuheading"><i class="fa-solid fa-utensils"></i> Our Menu</h2>
     <div class="menu">
-      <div class="starters">
+      <div class="menu-card starters">
         <table>
           <tr>
             <th colspan="2">Starters</th>
@@ -72,7 +85,7 @@
           </tr>
         </table>
       </div>
-      <div class="maincourse">
+      <div class="menu-card maincourse">
         <table>
           <tr>
             <th colspan="2">Main Course</th>
@@ -123,7 +136,7 @@
           </tr>
         </table>
       </div>
-      <div class="chaat">
+      <div class="menu-card chaat">
         <table>
           <tr>
             <th colspan="2">Chaat</th>
@@ -153,64 +166,110 @@
             <td>&#8377; 165</td>
           </tr>
           <tr>
-            <td>Raj Kachori - Best Seller</td>
+            <td>Raj Kachori <span class="best-seller">Best Seller</span></td>
             <td>&#8377; 190</td>
           </tr>
         </table>
       </div>
     </div>
-    <h2 id="locheading">Locations</h2>
+
+    <!-- LOCATIONS SECTION -->
+    <h2 id="locheading">
+      <i class="fa-solid fa-location-pin"></i> Our Locations
+    </h2>
     <div class="locations">
-      <div class="annanagar">
-        <h2>Anna Nagar</h2>
+      <div class="location-card">
+        <div class="location-icon"><i class="fa-solid fa-store"></i></div>
+        <h3>Anna Nagar</h3>
         <address>
           15, 10th Main Road<br />
           Anna Nagar,<br />
           Chennai - 600102
         </address>
+        <a href="tel:+911234567890" class="location-call">
+          <i class="fa-solid fa-phone"></i> Call Now
+        </a>
       </div>
-      <div class="velachery">
-        <h2>Velachery</h2>
+      <div class="location-card">
+        <div class="location-icon"><i class="fa-solid fa-store"></i></div>
+        <h3>Velachery</h3>
         <address>
           5, 3rd Cross Road,<br />
           Vijaya Nagar,<br />
           Velachery,<br />
           Chennai - 600042
         </address>
+        <a href="tel:+911234567890" class="location-call">
+          <i class="fa-solid fa-phone"></i> Call Now
+        </a>
       </div>
-      <div class="tambaram">
-        <h2>Tambaram</h2>
+      <div class="location-card">
+        <div class="location-icon"><i class="fa-solid fa-store"></i></div>
+        <h3>Tambaram</h3>
         <address>
           145, MIT Road,<br />
           Tambaram,<br />
           Chennai - 600045
         </address>
+        <a href="tel:+911234567890" class="location-call">
+          <i class="fa-solid fa-phone"></i> Call Now
+        </a>
       </div>
     </div>
-    <footer>
-      <div class="social-menu">
-        <ul>
-          <li>
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook"
-              ><i class="fab fa-facebook"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              aria-label="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://twitter.com" target="_blank" aria-label="Twitter"
-              ><i class="fab fa-twitter"></i
-            ></a>
-          </li>
-        </ul>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3><i class="fa-solid fa-bowl-rice"></i> Spicy Hut</h3>
+          <p>Bringing the finest flavors to your table since 2010.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#menuheading">Menu</a>
+          <a href="#locheading">Locations</a>
+          <a href="tel:+911234567890">Contact</a>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-menu">
+            <ul>
+              <li>
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  aria-label="Facebook"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  aria-label="Instagram"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  aria-label="Twitter"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div id="copyright">&#169; copyright Spicy Hut</div>
+      <div class="footer-bottom">
+        <p>&#169; 2024 Spicy Hut. All Rights Reserved.</p>
+      </div>
     </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>
