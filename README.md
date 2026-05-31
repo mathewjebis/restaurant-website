@@ -1,4 +1,5 @@
 Spicy Hut Restaurant
+[Live Website](https://mathewjebis.github.io/restaurant-website/)
 
 A beautiful and responsive website for a restaurant that showcases a delicious digital food menu, store locations, and full contact details. It features a sticky navigation header, animated scroll transitions, and a clean mobile friendly navigation menu.
 
